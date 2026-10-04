@@ -209,3 +209,42 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
 @media(max-width:480px){
   .alekeen-hero{background-position:69% center !important}
 }
+
+/* 2026-10-05 CLEAN HERO SOURCE FIX
+   Uses a clean boardroom photograph with no baked-in template text. */
+.alekeen-hero{
+  background-image:url('/assets/media/hero-boardroom-clean.jpg') !important;
+  background-size:cover !important;
+  background-position:center 48% !important;
+  background-repeat:no-repeat !important;
+}
+.alekeen-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(4,4,3,.94) 0%,
+    rgba(4,4,3,.91) 34%,
+    rgba(4,4,3,.72) 48%,
+    rgba(4,4,3,.34) 60%,
+    rgba(4,4,3,.08) 72%,
+    rgba(4,4,3,0) 82%) !important;
+}
+.alekeen-hero::after{display:none !important}
+.alekeen-hero .container{position:relative;z-index:2}
+@media(max-width:1020px){
+  .alekeen-hero{background-position:58% 48% !important}
+}
+@media(max-width:720px){
+  .alekeen-hero{background-position:64% center !important}
+  .alekeen-hero::before{
+    background:linear-gradient(90deg,
+      rgba(4,4,3,.90) 0%,
+      rgba(4,4,3,.74) 48%,
+      rgba(4,4,3,.28) 72%,
+      rgba(4,4,3,.04) 100%) !important;
+  }
+}
+@media(max-width:480px){.alekeen-hero{background-position:68% center !important}}
