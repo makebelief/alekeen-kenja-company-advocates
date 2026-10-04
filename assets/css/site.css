@@ -70,9 +70,10 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
 
 /* 2026-10-05 QA corrections: hero, footer, contact rail, contact spacing, Benson-only leadership */
 .alekeen-hero{
-  background-image:linear-gradient(90deg,rgba(4,4,3,1) 0%,rgba(4,4,3,.995) 33%,rgba(4,4,3,.97) 48%,rgba(4,4,3,.86) 60%,rgba(4,4,3,.54) 76%,rgba(4,4,3,.30) 100%),url('https://images.pexels.com/photos/1367274/pexels-photo-1367274.jpeg?auto=compress&cs=tinysrgb&w=2200')!important;
-  background-position:center right!important;
+  background-image:linear-gradient(90deg,rgba(4,4,3,.30),rgba(4,4,3,.10) 58%,rgba(4,4,3,.04)),url('/assets/media/hero-boardroom.jpg')!important;
+  background-position:center center!important;
   background-size:cover!important;
+  background-repeat:no-repeat!important;
 }
 .leadership-strip{grid-template-columns:minmax(0,1fr);max-width:520px}
 
@@ -127,3 +128,8 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
   .contact-rail{top:59%}
   .contact-grid + .map-shell{margin-top:26px}
 }
+
+/* Exact boardroom hero fit: keeps people visible while preserving clear copy space. */
+@media(min-width:721px){.alekeen-hero{background-position:center center!important}}
+@media(max-width:720px){.alekeen-hero{background-position:61% center!important}}
+@media(max-width:480px){.alekeen-hero{background-position:64% center!important}}
