@@ -133,3 +133,35 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
 @media(min-width:721px){.alekeen-hero{background-position:center center!important}}
 @media(max-width:720px){.alekeen-hero{background-position:61% center!important}}
 @media(max-width:480px){.alekeen-hero{background-position:64% center!important}}
+
+
+/* 2026-10-05 hero composition correction: reference-style boardroom visibility */
+.alekeen-hero{
+  background-image:
+    linear-gradient(90deg,
+      rgba(3,3,3,.92) 0%,
+      rgba(3,3,3,.86) 27%,
+      rgba(3,3,3,.66) 43%,
+      rgba(3,3,3,.30) 63%,
+      rgba(3,3,3,.10) 82%,
+      rgba(3,3,3,.04) 100%),
+    url('/assets/media/hero-boardroom.jpg') !important;
+  background-size:cover !important;
+  background-position:center 46% !important;
+  background-repeat:no-repeat !important;
+}
+.alekeen-hero .hero-content{max-width:760px}
+@media(max-width:1020px){
+  .alekeen-hero{background-position:60% 46% !important}
+}
+@media(max-width:720px){
+  .alekeen-hero{
+    background-image:
+      linear-gradient(180deg,rgba(3,3,3,.50) 0%,rgba(3,3,3,.64) 44%,rgba(3,3,3,.86) 100%),
+      url('/assets/media/hero-boardroom.jpg') !important;
+    background-position:62% 42% !important;
+  }
+}
+@media(max-width:480px){
+  .alekeen-hero{background-position:66% 40% !important}
+}
