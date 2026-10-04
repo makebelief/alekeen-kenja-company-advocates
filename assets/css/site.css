@@ -285,3 +285,47 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
 @media(max-width:480px){
   .alekeen-hero{background-position:56% center !important}
 }
+
+/* 2026-10-05 USER-SUPPLIED HERO + LEADERSHIP NAME VISIBILITY FIX */
+.alekeen-hero{
+  background-image:url('/assets/media/hero-boardroom-user.png') !important;
+  background-color:#111 !important;
+  background-size:cover !important;
+  background-position:center 46% !important;
+  background-repeat:no-repeat !important;
+}
+.alekeen-hero::before,
+.alekeen-hero::after{
+  content:none !important;
+  display:none !important;
+  background:none !important;
+  opacity:0 !important;
+}
+.alekeen-hero .hero-content{
+  position:relative;
+  z-index:2;
+  background:transparent !important;
+  box-shadow:none !important;
+}
+.alekeen-hero .display,
+.alekeen-hero .lead,
+.alekeen-hero .eyebrow,
+.alekeen-hero .hero-meta{
+  text-shadow:0 2px 10px rgba(0,0,0,.88),0 1px 2px rgba(0,0,0,.95);
+}
+.alekeen-hero .btn-ghost{background:rgba(0,0,0,.22);backdrop-filter:blur(2px)}
+
+/* Benson's name was inheriting white text inside a white leadership card. */
+.partner-section .leadership-mini{background:#fff;color:#17140f}
+.partner-section .leadership-mini b{color:#17140f !important;text-shadow:none !important}
+.partner-section .leadership-mini span{color:#9a6e18 !important}
+
+@media(max-width:1020px){
+  .alekeen-hero{background-position:53% 46% !important}
+}
+@media(max-width:720px){
+  .alekeen-hero{background-position:56% 44% !important}
+}
+@media(max-width:480px){
+  .alekeen-hero{background-position:58% 42% !important}
+}
