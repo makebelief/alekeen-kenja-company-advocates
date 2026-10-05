@@ -329,3 +329,32 @@ html,body{max-width:100%;overflow-x:hidden}body{min-width:0}.container,.nav,.bra
 @media(max-width:480px){
   .alekeen-hero{background-position:58% 42% !important}
 }
+
+/* 2026-10-05 HERO FILM TUNING
+   Uniform dark film over the supplied boardroom image: enough contrast for copy,
+   while keeping the people and room clearly visible. */
+.alekeen-hero{
+  position:relative;
+  isolation:isolate;
+}
+.alekeen-hero::before{
+  content:"" !important;
+  display:block !important;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:rgba(0,0,0,.44) !important;
+  opacity:1 !important;
+}
+.alekeen-hero::after{
+  content:none !important;
+  display:none !important;
+}
+.alekeen-hero .container{
+  position:relative;
+  z-index:2;
+}
+@media(max-width:720px){
+  .alekeen-hero::before{background:rgba(0,0,0,.48) !important}
+}
